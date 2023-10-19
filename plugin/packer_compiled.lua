@@ -135,26 +135,6 @@ _G.packer_plugins = {
     path = "/Users/oxmoon/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
-  ["nvim-dap"] = {
-    loaded = true,
-    path = "/Users/oxmoon/.local/share/nvim/site/pack/packer/start/nvim-dap",
-    url = "https://github.com/mfussenegger/nvim-dap"
-  },
-  ["nvim-dap-go"] = {
-    loaded = true,
-    path = "/Users/oxmoon/.local/share/nvim/site/pack/packer/start/nvim-dap-go",
-    url = "https://github.com/leoluz/nvim-dap-go"
-  },
-  ["nvim-dap-python"] = {
-    loaded = true,
-    path = "/Users/oxmoon/.local/share/nvim/site/pack/packer/start/nvim-dap-python",
-    url = "https://github.com/mfussenegger/nvim-dap-python"
-  },
-  ["nvim-dap-ui"] = {
-    loaded = true,
-    path = "/Users/oxmoon/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
-    url = "https://github.com/rcarriga/nvim-dap-ui"
-  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/oxmoon/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -200,21 +180,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/oxmoon/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
-  },
-  ["vim-closer"] = {
-    loaded = true,
-    path = "/Users/oxmoon/.local/share/nvim/site/pack/packer/start/vim-closer",
-    url = "https://github.com/rstacruz/vim-closer"
-  },
-  ["vim-dadbod"] = {
-    loaded = true,
-    path = "/Users/oxmoon/.local/share/nvim/site/pack/packer/start/vim-dadbod",
-    url = "https://github.com/tpope/vim-dadbod"
-  },
-  ["vim-dadbod-ui"] = {
-    loaded = true,
-    path = "/Users/oxmoon/.local/share/nvim/site/pack/packer/start/vim-dadbod-ui",
-    url = "https://github.com/kristijanhusak/vim-dadbod-ui"
   },
   ["vim-fugitive"] = {
     loaded = true,

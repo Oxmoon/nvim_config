@@ -2,16 +2,26 @@ local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
 
-lsp.ensure_installed({
-    'lua_ls',
-    'tsserver',
-    'html',
+require('mason').setup({})
+require('mason-lspconfig').setup({
+    -- Replace the language servers listed here 
+    -- with the ones you want to install
+    ensure_installed = {
+        'lua_ls',
+        'tsserver',
+        'html',
+        'intelephense',
+        'cssls',
+        'pylsp',
+    },
+    handlers = {
+        lsp.default_setup,
+    },
 })
 
--- Fix Undefined global 'vim'
-lsp.nvim_workspace()
-
 local cmp = require('cmp')
+local cmp_action = require('lsp-zero').cmp_action()
+
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
     ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
@@ -23,20 +33,17 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 cmp_mappings['<Tab>'] = nil
 cmp_mappings['<S-Tab>'] = nil
 
+cmp.setup({
+    sources = {
+        {name = 'nvim_lsp'},
+    }
+})
+
 require("luasnip.loaders.from_vscode").lazy_load()
 
-lsp.setup_nvim_cmp({
-    mapping = cmp_mappings
-})
 
 lsp.set_preferences({
     suggest_lsp_servers = false,
-})
-
-require('lspconfig').html.setup({
-  on_attach = function(client, bufnr)
-    print('hello html')
-  end
 })
 
 
@@ -76,8 +83,3 @@ lsp.set_sign_icons({
 })
 
 lsp.setup()
-
-vim.diagnostic.config({
-    virtual_text = true
-})
-

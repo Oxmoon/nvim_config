@@ -7,12 +7,6 @@ return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
 
-	-- Simple plugins can be specified as strings
-
-    --closing and ending
-	use 'rstacruz/vim-closer'
-    --  use 'tpope/vim-endwise'
-
     --Telescope
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.2',
@@ -39,16 +33,6 @@ return require('packer').startup(function(use)
     --undotree
     use 'mbbill/undotree'
 
-    --db
-    use 'tpope/vim-dadbod'
-    use 'kristijanhusak/vim-dadbod-ui'
-
-    --debugger
-    use 'mfussenegger/nvim-dap'
-    use 'rcarriga/nvim-dap-ui'
-    use 'leoluz/nvim-dap-go' --golang   
-    use 'mfussenegger/nvim-dap-python' --python
-
     --autopairs
     use {
         "windwp/nvim-autopairs",
@@ -58,7 +42,7 @@ return require('packer').startup(function(use)
     --LSP
 	use {
 		'VonHeikemen/lsp-zero.nvim',
-		branch = 'v2.x',
+		branch = 'v3.x',
 		requires = {
 			-- LSP Support
 			{'neovim/nvim-lspconfig'},             -- Required

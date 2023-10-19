@@ -1,1 +1,2 @@
-require("oxmoon")
+require("oxmoon.core")
+require("oxmoon.lazy")

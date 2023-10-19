@@ -10,4 +10,19 @@ if not vim.loop.fs_stat(lazypath) then
     })
 end
 vim.opt.rtp:prepend(lazypath)
-require("lazy").setup("oxmoon.plugins")
+
+require("lazy").setup({
+    {import = "oxmoon.plugins"},
+    {import = "oxmoon.plugins.lsp"}
+}, {
+    install = {
+        colorscheme = {"nightfox"},
+    },
+    checker = {
+        enabled = true,
+        notify = false,
+    },
+    change_detection = {
+        notify = false,
+    },
+})

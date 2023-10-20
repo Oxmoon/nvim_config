@@ -12,11 +12,11 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    {import = "oxmoon.plugins"},
-    {import = "oxmoon.plugins.lsp"}
+    { import = "oxmoon.plugins" },
+    { import = "oxmoon.plugins.lsp" },
 }, {
     install = {
-        colorscheme = {"nightfox"},
+        colorscheme = { "nightfox" },
     },
     checker = {
         enabled = true,
